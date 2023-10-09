@@ -1,0 +1,39 @@
+### 리뷰 작성
+POST http://localhost:8082/review
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY3Mzc3MTMsImV4cCI6MTY5NjgyNDExM30.luxm1iZTDHJkVGZdYcvTpxgpsYNS1v6WDwGl_Zm0Bv4
+
+{
+  "reserveId": 1,
+  "reviewComment": "맵네요 무쟈게 근데 존맛탱",
+  "shopId": 1,
+  "stars": 5
+}
+
+### 리뷰 수정
+PUT http://localhost:8082/review
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY3Mzc3MTMsImV4cCI6MTY5NjgyNDExM30.luxm1iZTDHJkVGZdYcvTpxgpsYNS1v6WDwGl_Zm0Bv4
+
+{
+  "id": 9,
+  "reviewComment": "아주 조씁니다.",
+  "stars": 3
+}
+
+### 리뷰 삭제
+DELETE http://localhost:8082/review?id=15&reserveId=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY3Mzc3MTMsImV4cCI6MTY5NjgyNDExM30.luxm1iZTDHJkVGZdYcvTpxgpsYNS1v6WDwGl_Zm0Bv4
+
+### 리뷰 찾기(고객)
+GET http://localhost:8082/review/customer/search?shopId=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY3Mzc3MTMsImV4cCI6MTY5NjgyNDExM30.luxm1iZTDHJkVGZdYcvTpxgpsYNS1v6WDwGl_Zm0Bv4
+
+### 리뷰 찾기(셀러)
+GET http://localhost:8082/review/seller/search?shopId=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6ImxhdjczSFhHR0ZpK2V3dEFsQzFWaFE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NzQ5MjgyLCJleHAiOjE2OTY4MzU2ODJ9.A9oirezbAmHHYZ-Htvjj8eR6C7gbE_5RO7l7BDa8qis
+
+

@@ -1,0 +1,60 @@
+### 회원가입(고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1996-11-13",
+  "email": "jkatwxc3@naver.com",
+  "name" : "홍길동",
+  "password" : "789789",
+  "phone" : "01025305023"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=jkatwxc2@naver.com&code=jGIsyUHE93
+
+
+### 로그인 (고객)
+POST http://localhost:8081/signIn/customer
+Content-Type: application/json
+
+{
+  "email": "jkatwxc3@naver.com",
+  "password" : "789789"
+}
+
+### 고객 정보 찾기
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxVE80NEpHVFdRRVpOQXkxNFRmQnovZXQwWnVMd3JWdis3R2pzdDYwQkVBPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY1NTUxNDYsImV4cCI6MTY5NjY0MTU0Nn0.fLnQJYgOvsfLW2JzfnrFbnSY4bQu1Jwlduqu48pnzRk
+
+
+
+### 회원가입(셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1992-07-15",
+  "email": "jkatwxc2@naver.com",
+  "name" : "손흥민",
+  "password" : "dkdkdkdk5023!!",
+  "phone" : "01025551258"
+}
+
+### 이메일 인증
+GET http://localhost:8081/signup/seller/verify?email=jkatwxc2@naver.com&code=I8HX03BCS6
+
+
+### 로그인 (셀러)
+POST http://localhost:8081/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "jkatwxc2@naver.com",
+  "password" : "dkdkdkdk5023!!"
+}
+
+### 유저 정보 찾기
+GET http://localhost:8081/customer/getInfo
+

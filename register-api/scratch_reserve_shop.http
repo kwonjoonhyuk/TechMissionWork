@@ -1,0 +1,34 @@
+### 상점 예약하기
+POST http://localhost:8082/shop/reserve
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY3Mzc3MTMsImV4cCI6MTY5NjgyNDExM30.luxm1iZTDHJkVGZdYcvTpxgpsYNS1v6WDwGl_Zm0Bv4
+
+{
+  "customerName": "김아무개",
+  "hours": 15,
+  "minutes": 0,
+  "phone": "01084255023",
+  "reserveDate": "2023-10-09",
+  "shopId": 1,
+  "shopName": "마라공방 산본점"
+}
+
+### 상점 예약 가능 여부 확인
+GET http://localhost:8082/shop/reserve/customer/availability?shopId=2&reserveDate=2023-10-05&hours=10&minutes=30
+Content-Type: application/json
+
+### 상점 예약내역 확인(고객)
+GET http://localhost:8082/shop/reserve/customer/reserveHistory
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY1NTU1MTIsImV4cCI6MTY5NjY0MTkxMn0.GceaGHXjcm_vVai2la2FAWrak5T4ukzF_0pw7hyC_PE
+
+### 상점 예약내역 확인(셀러)
+GET http://localhost:8082/shop/reserve/seller/search?shopId=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6ImxhdjczSFhHR0ZpK2V3dEFsQzFWaFE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NjU4MTgzLCJleHAiOjE2OTY3NDQ1ODN9.UqRPdEv5EOf4Gm90JV6qybMUjZhFczBaHRIav88mqbc
+
+### 상점 예약 취소
+DELETE http://localhost:8082/shop/reserve?id=12
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQ2pkd1BCcnd3Qnl3ZWRRdHlKRlM4cFVFd0pQUnlJeEhwaVFCYmFCbFk4PSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTY1NTU1MTIsImV4cCI6MTY5NjY0MTkxMn0.GceaGHXjcm_vVai2la2FAWrak5T4ukzF_0pw7hyC_PE
+

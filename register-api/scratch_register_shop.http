@@ -1,0 +1,89 @@
+### 상점 추가
+POST http://localhost:8082/seller/shop
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxVE80NEpHVFdRRVpOQXkxNFRmQnovZXQwWnVMd3JWdis3R2pzdDYwQkVBPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NzM3MjU4LCJleHAiOjE2OTY4MjM2NTh9.2QV5egIABAXLseaP43XQhd8m4vxHcgUaFViDyYyQX_I
+
+{
+  "address": "경기 군포시 금산로 9 1층",
+  "items": [
+    {
+      "menuDescription": "서서갈비 1대 200g",
+      "menuName": "서서갈비 1대 200g",
+      "price": 21000
+    }
+  ],
+  "shopDescription": "안녕하세요. 백년회관 서서갈비 금정점입니다",
+  "shopName": "백년회관서서갈비 금정점"
+}
+
+### 상점 수정 메뉴까지 같이 수정됨
+PUT http://localhost:8082/seller/shop
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzE5ODcxLCJleHAiOjE2OTY0MDYyNzF9.wW-0fS5ZYVUXxEftGB6lLOc96Suy8cFP8O_Dsr95hUg
+
+{
+  "address": "경기 군포시 광정로 120 주몽아파트",
+  "id": 4,
+  "items": [
+    {
+      "id": 4,
+      "menuDescription": "초코우유",
+      "menuName": "초코우유",
+      "price": 1500,
+      "shopId": 4
+    }
+  ],
+  "shopDescription": "gs 25 주몽점",
+  "shopName": "gs 25 주몽점"
+}
+
+### 상점 메뉴 추가
+POST http://localhost:8082/seller/shop/menu
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzE5ODcxLCJleHAiOjE2OTY0MDYyNzF9.wW-0fS5ZYVUXxEftGB6lLOc96Suy8cFP8O_Dsr95hUg
+
+{
+  "menuDescription" : "삼선짬뽕입니다.",
+  "menuName": "짬뽕",
+  "price": 280,
+  "shopId": 2
+}
+
+### 상점 메뉴 수정
+PUT http://localhost:8082/seller/shop/menu
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzE5ODcxLCJleHAiOjE2OTY0MDYyNzF9.wW-0fS5ZYVUXxEftGB6lLOc96Suy8cFP8O_Dsr95hUg
+
+{
+  "id": 1,
+  "menuDescription": "삼선 짜장면입니다.",
+  "menuName": "삼선짜장",
+  "price": 10000,
+  "shopId": 2
+}
+
+### 상점 삭제
+DELETE http://localhost:8082/seller/shop?id=5
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NDEyNDQ0LCJleHAiOjE2OTY0OTg4NDR9.-FwWwXrXp0tF0bP4-nEYZeELYMTSMrR6JSeK43kYwak
+
+
+
+### 상점 메뉴 삭제
+DELETE http://localhost:8082/seller/shop/menu?id=1
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzE5ODcxLCJleHAiOjE2OTY0MDYyNzF9.wW-0fS5ZYVUXxEftGB6lLOc96Suy8cFP8O_Dsr95hUg
+
+
+### 상점 거리순으로 검색
+GET http://localhost:8082/search/shop?longitude=37.359969&latitude=126.931832
+Content-Type: application/json
+
+### 상점 가나다순으로 검색
+GET http://localhost:8082/search/shop/ASC
+Content-Type: application/json
+
+### 상점 별점순으로 검색
+GET http://localhost:8082/search/shop/stars/desc
+Content-Type: application/json
+

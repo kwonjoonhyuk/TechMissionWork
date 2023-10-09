@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.shop.update;
+package com.zerobase.tech.register.domain.shops.update;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

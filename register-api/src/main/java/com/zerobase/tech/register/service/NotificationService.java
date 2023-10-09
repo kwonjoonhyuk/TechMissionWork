@@ -1,7 +1,7 @@
 package com.zerobase.tech.register.service;
 
 import com.zerobase.tech.register.domain.notification.Notify;
-import com.zerobase.tech.register.domain.repository.notification.EmitterRepository;
+import com.zerobase.tech.register.domain.repository.notifications.EmitterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

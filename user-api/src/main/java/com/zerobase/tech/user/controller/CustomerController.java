@@ -3,8 +3,8 @@ package com.zerobase.tech.user.controller;
 
 import com.zerobase.domain.common.UserVo;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import com.zerobase.tech.user.domain.customer.CustomerDto;
-import com.zerobase.tech.user.domain.model.Customer;
+import com.zerobase.tech.user.userDomain.customer.CustomerDto;
+import com.zerobase.tech.user.userDomain.model.Customer;
 import com.zerobase.tech.user.exception.CustomException;
 import com.zerobase.tech.user.exception.ErrorCode;
 import com.zerobase.tech.user.service.customer.CustomerService;

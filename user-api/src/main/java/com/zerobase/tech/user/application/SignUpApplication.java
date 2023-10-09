@@ -3,9 +3,9 @@ package com.zerobase.tech.user.application;
 
 import com.zerobase.tech.user.client.MailgunClient;
 import com.zerobase.tech.user.client.mailgunApi.SendMailForm;
-import com.zerobase.tech.user.domain.SignUpForm;
-import com.zerobase.tech.user.domain.model.Customer;
-import com.zerobase.tech.user.domain.model.Seller;
+import com.zerobase.tech.user.userDomain.SignUpForm;
+import com.zerobase.tech.user.userDomain.model.Customer;
+import com.zerobase.tech.user.userDomain.model.Seller;
 import com.zerobase.tech.user.exception.CustomException;
 import com.zerobase.tech.user.exception.ErrorCode;
 import com.zerobase.tech.user.service.customer.SignUpCustomerService;

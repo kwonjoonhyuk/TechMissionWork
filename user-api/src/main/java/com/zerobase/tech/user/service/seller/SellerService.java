@@ -1,8 +1,8 @@
 package com.zerobase.tech.user.service.seller;
 
-import com.zerobase.tech.user.domain.SignUpForm;
-import com.zerobase.tech.user.domain.model.Seller;
-import com.zerobase.tech.user.domain.repository.SellerRepository;
+import com.zerobase.tech.user.userDomain.SignUpForm;
+import com.zerobase.tech.user.userDomain.model.Seller;
+import com.zerobase.tech.user.userDomain.repository.SellerRepository;
 import com.zerobase.tech.user.exception.CustomException;
 import com.zerobase.tech.user.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;

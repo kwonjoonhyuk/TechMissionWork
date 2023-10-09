@@ -3,9 +3,9 @@ package com.zerobase.tech.user.application;
 
 import com.zerobase.domain.common.UserType;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import com.zerobase.tech.user.domain.SignInForm;
-import com.zerobase.tech.user.domain.model.Customer;
-import com.zerobase.tech.user.domain.model.Seller;
+import com.zerobase.tech.user.userDomain.SignInForm;
+import com.zerobase.tech.user.userDomain.model.Customer;
+import com.zerobase.tech.user.userDomain.model.Seller;
 import com.zerobase.tech.user.exception.CustomException;
 import com.zerobase.tech.user.exception.ErrorCode;
 import com.zerobase.tech.user.service.customer.CustomerService;

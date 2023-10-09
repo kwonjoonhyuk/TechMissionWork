@@ -2,7 +2,7 @@ package com.zerobase.tech.user.controller;
 
 
 import com.zerobase.tech.user.application.SignUpApplication;
-import com.zerobase.tech.user.domain.SignUpForm;
+import com.zerobase.tech.user.userDomain.SignUpForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

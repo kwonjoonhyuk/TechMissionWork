@@ -1,7 +1,7 @@
-package com.zerobase.tech.user.domain.customer;
+package com.zerobase.tech.user.userDomain.customer;
 
 
-import com.zerobase.tech.user.domain.model.Customer;
+import com.zerobase.tech.user.userDomain.model.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

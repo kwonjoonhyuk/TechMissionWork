@@ -1,7 +1,7 @@
-package com.zerobase.tech.user.domain.repository;
+package com.zerobase.tech.user.userDomain.repository;
 
 
-import com.zerobase.tech.user.domain.model.Seller;
+import com.zerobase.tech.user.userDomain.model.Seller;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

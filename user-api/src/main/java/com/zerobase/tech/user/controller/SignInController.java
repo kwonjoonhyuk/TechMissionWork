@@ -2,7 +2,7 @@ package com.zerobase.tech.user.controller;
 
 
 import com.zerobase.tech.user.application.SignInApplication;
-import com.zerobase.tech.user.domain.SignInForm;
+import com.zerobase.tech.user.userDomain.SignInForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

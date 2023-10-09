@@ -1,8 +1,8 @@
-package com.zerobase.tech.user.domain.model;
+package com.zerobase.tech.user.userDomain.model;
 
 
 
-import com.zerobase.tech.user.domain.SignUpForm;
+import com.zerobase.tech.user.userDomain.SignUpForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 

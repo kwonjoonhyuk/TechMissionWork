@@ -1,4 +1,4 @@
-package com.zerobase.tech.user.domain;
+package com.zerobase.tech.user.userDomain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

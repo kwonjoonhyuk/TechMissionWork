@@ -1,7 +1,6 @@
-package com.zerobase.tech.register.domain.repository.shop;
+package com.zerobase.tech.register.domain.repository.shops;
 
-import com.zerobase.tech.register.domain.repository.shop.ShopCustomRepository;
-import com.zerobase.tech.register.domain.shop.Shop;
+import com.zerobase.tech.register.domain.shops.Shop;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 

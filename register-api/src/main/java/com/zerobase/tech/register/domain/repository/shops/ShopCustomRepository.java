@@ -1,6 +1,6 @@
-package com.zerobase.tech.register.domain.repository.shop;
+package com.zerobase.tech.register.domain.repository.shops;
 
-import com.zerobase.tech.register.domain.shop.Shop;
+import com.zerobase.tech.register.domain.shops.Shop;
 
 import java.util.List;
 

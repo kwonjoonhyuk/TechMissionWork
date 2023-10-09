@@ -1,12 +1,12 @@
-package com.zerobase.tech.register.domain.repository.shop;
+package com.zerobase.tech.register.domain.repository.shops;
 
 
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.core.types.dsl.NumberExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
-import com.zerobase.tech.register.domain.shop.QShop;
-import com.zerobase.tech.register.domain.shop.Shop;
+import com.zerobase.tech.register.domain.shops.QShop;
+import com.zerobase.tech.register.domain.shops.Shop;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

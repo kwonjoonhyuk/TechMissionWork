@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.reserve;
+package com.zerobase.tech.register.domain.reserveShop;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

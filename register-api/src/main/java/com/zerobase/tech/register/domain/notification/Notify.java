@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+// 알림 Entity
 public class Notify {
 
     @Id

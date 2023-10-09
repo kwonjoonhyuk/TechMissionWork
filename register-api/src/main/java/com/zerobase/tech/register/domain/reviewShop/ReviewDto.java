@@ -1,7 +1,5 @@
-package com.zerobase.tech.register.domain.review;
+package com.zerobase.tech.register.domain.reviewShop;
 
-import com.zerobase.tech.register.domain.reserve.ShopReserve;
-import com.zerobase.tech.register.domain.reserve.ShopReserveDto;
 import lombok.*;
 
 @Getter

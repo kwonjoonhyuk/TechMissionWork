@@ -1,7 +1,6 @@
-package com.zerobase.tech.register.domain.review;
+package com.zerobase.tech.register.domain.reviewShop;
 
 import lombok.*;
-import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
-package com.zerobase.tech.register.domain.shop;
+package com.zerobase.tech.register.domain.shops;
 
 import com.zerobase.tech.register.domain.BaseEntity;
-import com.zerobase.tech.register.domain.shop.add.AddShopMenuForm;
+import com.zerobase.tech.register.domain.shops.add.AddShopMenuForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;

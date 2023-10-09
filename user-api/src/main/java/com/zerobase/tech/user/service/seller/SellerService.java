@@ -18,22 +18,22 @@ public class SellerService {
 
     private final SellerRepository sellerRepository;
 
-    public Optional<Seller> findByIdAndEmail(Long id, String email){
-        return sellerRepository.findByIdAndEmail(id,email);
-    }
-
+    // 이메일과 패스워드로 상점(셀러) 이메일 인증여부 확인
     public Optional<Seller> findValidSeller(String email, String password){
         return sellerRepository.findByEmailAndPasswordAndVerify(email,password,"true");
     }
 
+    // 상점(셀러) 회원가입
     public Seller signUp(SignUpForm form){
         return sellerRepository.save(Seller.from(form));
     }
 
+    // 상점(셀러) 이메일 존재하는지 여부 확인(회원가입 절차중)
     public boolean isEmailExists(String email){
         return sellerRepository.findByEmail(email).isPresent();
     }
 
+    // 이메일 인증
     @Transactional
     public void verifyEmail(String email , String code){
         Seller seller = sellerRepository.findByEmail(email)
@@ -49,6 +49,7 @@ public class SellerService {
         seller.setVerify("true");
     }
 
+    // 이메일 인증 코드 발송
     @Transactional
     public LocalDateTime changeSellerValidateEmail(Long sellerId, String verificationCode) {
         Optional<Seller> sellerOptional = sellerRepository.findById(sellerId);

@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.repository.notification;
+package com.zerobase.tech.register.domain.repository.notifications;
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 

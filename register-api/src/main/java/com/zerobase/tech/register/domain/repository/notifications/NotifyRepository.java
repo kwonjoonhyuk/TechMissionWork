@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.repository.notification;
+package com.zerobase.tech.register.domain.repository.notifications;
 
 import com.zerobase.tech.register.domain.notification.Notify;
 import org.springframework.data.jpa.repository.JpaRepository;

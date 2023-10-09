@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.review;
+package com.zerobase.tech.register.domain.reviewShop;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

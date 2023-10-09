@@ -1,7 +1,7 @@
-package com.zerobase.tech.register.kakaoapi;
+package com.zerobase.tech.register.kakaoRestApi;
 
-import com.zerobase.tech.register.exception.CustomException;
-import com.zerobase.tech.register.exception.ErrorCode;
+import com.zerobase.tech.register.exceptions.CustomException;
+import com.zerobase.tech.register.exceptions.ErrorCode;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

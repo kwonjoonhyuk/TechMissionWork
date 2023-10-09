@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.reserve;
+package com.zerobase.tech.register.domain.reserveShop;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -38,6 +38,7 @@ public class ShopReserve {
     private String reserveVerify = "true";
     private String addReviewVerify = "true";
 
+    // ShopReserveService에서 사용하는 등록 함수
     public static ShopReserve of(Long customerId, AddShopReserveForm form) {
         return ShopReserve.builder()
                 .shopId(form.getShopId())

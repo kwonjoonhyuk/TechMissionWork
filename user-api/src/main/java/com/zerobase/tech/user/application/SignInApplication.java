@@ -21,6 +21,7 @@ public class SignInApplication {
     private final SellerService sellerService;
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
 
+    // 고객 로그인 토큰 생성
     public String customerLoginToken(SignInForm form) {
         // 1. 로그인 가능 여부
         Customer customer = customerService.findValidCustomer(form.getEmail(), form.getPassword())
@@ -32,6 +33,7 @@ public class SignInApplication {
         return jwtAuthenticationProvider.createToken(customer.getEmail(), customer.getId(), UserType.CUSTOMER);
     }
 
+    // 셀러 로그인 토큰 생성
     public String sellerLoginToken(SignInForm form) {
         // 1. 로그인 가능 여부
         Seller seller = sellerService.findValidSeller(form.getEmail(), form.getPassword())

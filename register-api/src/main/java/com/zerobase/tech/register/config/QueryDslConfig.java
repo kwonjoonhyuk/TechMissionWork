@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+//Querydsl Bean 등록
 @Configuration
 public class QueryDslConfig {
 

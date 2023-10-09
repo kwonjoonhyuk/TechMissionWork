@@ -13,6 +13,7 @@ public class Aes256Util {
     public static final String KEY = "ZEROBASEKEYISZEROBASEKEY";
     public static final String IV = KEY.substring(0,16);
 
+    // 암호화하기
     public static String encrypt(String text){
         try {
             Cipher cipher = Cipher.getInstance(alg);
@@ -26,6 +27,7 @@ public class Aes256Util {
         }
     }
 
+    // 해독 하기
     public static String decrypt(String cipherText){
         try {
             Cipher cipher = Cipher.getInstance(alg);

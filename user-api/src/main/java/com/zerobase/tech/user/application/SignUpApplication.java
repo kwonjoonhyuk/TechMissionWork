@@ -23,14 +23,17 @@ public class SignUpApplication {
     private final SignUpCustomerService signUpCustomerService;
     private final SellerService sellerService;
 
+    // 고객 이메일 코드 인증
     public void customerVerify(String email, String code){
         signUpCustomerService.verifyEmail(email,code);
     }
 
+    // 상점(셀러) 이메일 코드 인증
     public void sellerVerify(String email, String code){
         sellerService.verifyEmail(email,code);
     }
 
+    // 고객 회원가입 진행
     public String customerSignUp(SignUpForm form) {
         if (signUpCustomerService.isEmailExists(form.getEmail())) {
             throw new CustomException(ErrorCode.ALREADY_REGISTER_USER);
@@ -51,6 +54,7 @@ public class SignUpApplication {
 
     }
 
+    // 상점(셀러) 회원가입 진행
     public String sellerSignUp(SignUpForm form){
         if (sellerService.isEmailExists(form.getEmail())) {
             throw new CustomException(ErrorCode.ALREADY_REGISTER_USER);
@@ -72,10 +76,12 @@ public class SignUpApplication {
 
 
 
+    // 이메일 인증을 위한 10자리의 랜덤 코드 생성
     private String getRandomCode() {
         return RandomStringUtils.random(10, true, true);
     }
 
+    // 이메일 인증을 위한 url 생성
     private String getVerificationBody(String email, String name,String type ,String code) {
         StringBuilder builder = new StringBuilder();
         return builder.append("Hello").append(name).append("! Please Click Link for Verification.\n")

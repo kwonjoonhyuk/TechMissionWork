@@ -31,6 +31,8 @@ configurations {
     }
 }
 dependencies {
+
+    // jwt 토큰을 사용하기위한 user-domain 모듈 import
     implementation project(path: ":user-domain", configuration: "default")
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -44,17 +46,26 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
+    // 엔티티들의 변경이력 자동 관리를 위한 envers
     implementation 'org.springframework.data:spring-data-envers'
+
+    // swagger 추가
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
+    // 랜덤 문자열 생성을 위한 lang 추가
     implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+    //HTTP Client 도구로써, 외부 API 호출을 쉽게 하기 위한 Openfeign
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    //Configuration 메타데이터를 처리하는데 도움을 주기 위한 도구
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
     //querydsl
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
     implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 
+    //json 사용을 위한 json
     implementation 'org.json:json:20230618'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

@@ -2,7 +2,7 @@ package com.zerobase.tech.user.application;
 
 
 import com.zerobase.tech.user.client.MailgunClient;
-import com.zerobase.tech.user.client.mailgun.SendMailForm;
+import com.zerobase.tech.user.client.mailgunApi.SendMailForm;
 import com.zerobase.tech.user.domain.SignUpForm;
 import com.zerobase.tech.user.domain.model.Customer;
 import com.zerobase.tech.user.domain.model.Seller;

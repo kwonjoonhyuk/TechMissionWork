@@ -1,13 +1,13 @@
 package com.zerobase.tech.register.service;
 
-import com.zerobase.tech.register.domain.shop.Shop;
-import com.zerobase.tech.register.domain.shop.ShopMenu;
-import com.zerobase.tech.register.domain.repository.shop.ShopMenuRepository;
-import com.zerobase.tech.register.domain.repository.shop.ShopRepository;
-import com.zerobase.tech.register.domain.shop.add.AddShopMenuForm;
-import com.zerobase.tech.register.domain.shop.update.UpdateShopMenuForm;
-import com.zerobase.tech.register.exception.CustomException;
-import com.zerobase.tech.register.exception.ErrorCode;
+import com.zerobase.tech.register.domain.shops.Shop;
+import com.zerobase.tech.register.domain.shops.ShopMenu;
+import com.zerobase.tech.register.domain.repository.shops.ShopMenuRepository;
+import com.zerobase.tech.register.domain.repository.shops.ShopRepository;
+import com.zerobase.tech.register.domain.shops.add.AddShopMenuForm;
+import com.zerobase.tech.register.domain.shops.update.UpdateShopMenuForm;
+import com.zerobase.tech.register.exceptions.CustomException;
+import com.zerobase.tech.register.exceptions.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +19,7 @@ public class ShopMenuService {
     private final ShopRepository shopRepository;
     private final ShopMenuRepository shopMenuRepository;
 
+    // 상점 메뉴 추가(셀러)
     @Transactional
     public Shop addShopMenu(Long sellerId, AddShopMenuForm form) {
         Shop shop = shopRepository.findBySellerIdAndId(sellerId,form.getShopId())
@@ -34,6 +35,7 @@ public class ShopMenuService {
         return shop;
     }
 
+    // 상점 메뉴 수정(셀러)
     @Transactional
     public ShopMenu updateShopMenu(Long sellerId, UpdateShopMenuForm form) {
         ShopMenu shopMenu = shopMenuRepository.findById(form.getId())
@@ -46,6 +48,7 @@ public class ShopMenuService {
         return shopMenu;
     }
 
+    // 상점 메뉴 지우기(셀러)
     @Transactional
     public void deleteShopMenu(Long sellerId , Long shopMenuId){
         ShopMenu shopMenu = shopMenuRepository.findById(shopMenuId)

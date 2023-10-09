@@ -1,14 +1,14 @@
 package com.zerobase.tech.register.service;
 
-import com.zerobase.tech.register.domain.shop.Shop;
-import com.zerobase.tech.register.domain.shop.ShopMenu;
-import com.zerobase.tech.register.domain.repository.shop.ShopRepository;
-import com.zerobase.tech.register.domain.shop.add.AddShopForm;
-import com.zerobase.tech.register.domain.shop.update.UpdateShopForm;
-import com.zerobase.tech.register.domain.shop.update.UpdateShopMenuForm;
-import com.zerobase.tech.register.exception.CustomException;
-import com.zerobase.tech.register.exception.ErrorCode;
-import com.zerobase.tech.register.kakaoapi.KakaoAddress;
+import com.zerobase.tech.register.domain.shops.Shop;
+import com.zerobase.tech.register.domain.shops.ShopMenu;
+import com.zerobase.tech.register.domain.repository.shops.ShopRepository;
+import com.zerobase.tech.register.domain.shops.add.AddShopForm;
+import com.zerobase.tech.register.domain.shops.update.UpdateShopForm;
+import com.zerobase.tech.register.domain.shops.update.UpdateShopMenuForm;
+import com.zerobase.tech.register.exceptions.CustomException;
+import com.zerobase.tech.register.exceptions.ErrorCode;
+import com.zerobase.tech.register.kakaoRestApi.KakaoAddress;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,11 +22,13 @@ public class ShopService {
 
     private final ShopRepository shopRepository;
 
+    // 상점 추가(셀러)
     @Transactional
     public Shop addShop(Long sellerId, AddShopForm form) {
         return shopRepository.save(Objects.requireNonNull(Shop.of(sellerId, form)));
     }
 
+    // 상점 수정(셀러)
     @Transactional
     public Shop updateShop(Long sellerId, UpdateShopForm form) {
         Shop shop = shopRepository.findBySellerIdAndId(sellerId, form.getId())
@@ -58,6 +60,7 @@ public class ShopService {
         return shop;
     }
 
+    // 상점 삭제(셀러)
     @Transactional
     public void deleteShop(Long sellerId , Long shopId){
         Shop shop = shopRepository.findBySellerIdAndId(sellerId,shopId)

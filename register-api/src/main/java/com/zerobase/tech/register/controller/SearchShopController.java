@@ -1,7 +1,6 @@
 package com.zerobase.tech.register.controller;
 
-import com.zerobase.tech.register.domain.shop.Shop;
-import com.zerobase.tech.register.domain.shop.dto.ShopDto;
+import com.zerobase.tech.register.domain.shops.dto.ShopDto;
 import com.zerobase.tech.register.service.ShopSearchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +16,7 @@ public class SearchShopController {
 
     private final ShopSearchService shopSearchService;
 
+    // 거리순으로 검색
     @GetMapping
     public ResponseEntity<List<ShopDto>> searchByLongitudeAndLatitude(@RequestParam double longitude, double latitude){
         return ResponseEntity.ok(
@@ -25,6 +25,7 @@ public class SearchShopController {
         );
     }
 
+    //가나다 순으로 검색
     @GetMapping("/ASC")
     public ResponseEntity<List<ShopDto>> searchByShopName(){
         return ResponseEntity.ok(

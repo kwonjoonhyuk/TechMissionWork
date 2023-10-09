@@ -1,10 +1,8 @@
-package com.zerobase.tech.register.domain.repository.reserve;
+package com.zerobase.tech.register.domain.repository.reserveShop;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.zerobase.tech.register.domain.reserve.QShopReserve;
-import com.zerobase.tech.register.domain.reserve.ShopReserve;
-import com.zerobase.tech.register.domain.shop.QShop;
-import io.swagger.models.auth.In;
+import com.zerobase.tech.register.domain.reserveShop.QShopReserve;
+import com.zerobase.tech.register.domain.reserveShop.ShopReserve;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

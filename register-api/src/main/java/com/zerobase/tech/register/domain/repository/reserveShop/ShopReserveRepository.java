@@ -1,6 +1,6 @@
-package com.zerobase.tech.register.domain.repository.reserve;
+package com.zerobase.tech.register.domain.repository.reserveShop;
 
-import com.zerobase.tech.register.domain.reserve.ShopReserve;
+import com.zerobase.tech.register.domain.reserveShop.ShopReserve;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

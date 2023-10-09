@@ -1,7 +1,7 @@
-package com.zerobase.tech.register.domain.repository.reserve;
+package com.zerobase.tech.register.domain.repository.reserveShop;
 
 
-import com.zerobase.tech.register.domain.reserve.ShopReserve;
+import com.zerobase.tech.register.domain.reserveShop.ShopReserve;
 
 
 import java.time.LocalDate;

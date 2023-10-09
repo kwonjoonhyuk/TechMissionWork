@@ -1,7 +1,7 @@
-package com.zerobase.tech.register.domain.shop.dto;
+package com.zerobase.tech.register.domain.shops.dto;
 
 
-import com.zerobase.tech.register.domain.shop.ShopMenu;
+import com.zerobase.tech.register.domain.shops.ShopMenu;
 import lombok.*;
 
 @Getter

@@ -1,6 +1,6 @@
-package com.zerobase.tech.register.domain.shop.dto;
+package com.zerobase.tech.register.domain.shops.dto;
 
-import com.zerobase.tech.register.domain.shop.Shop;
+import com.zerobase.tech.register.domain.shops.Shop;
 import lombok.*;
 
 import java.util.List;
@@ -20,6 +20,7 @@ public class ShopDto {
     private double stars;
     private List<ShopMenuDto> items;
 
+
     public static ShopDto from(Shop shop){
         List<ShopMenuDto> items =  shop.getShopMenus()
                 .stream().map(ShopMenuDto::from).collect(Collectors.toList());
@@ -34,6 +35,7 @@ public class ShopDto {
                 .items(items)
                 .build();
     }
+
 
     public static ShopDto withOutMenusfrom(Shop shop){
 

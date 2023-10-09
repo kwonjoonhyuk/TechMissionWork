@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.exception;
+package com.zerobase.tech.register.exceptions;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
+// 키오스크 예약 확인 입력 폼
 public class KioskForm {
     String name;
     String phone;

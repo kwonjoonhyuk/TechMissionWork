@@ -1,7 +1,7 @@
 ### 상점 포스기 알림 켜기
 GET http://localhost:8082/seller/shop/kioskVerify
 Content-Type: application/json
-X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6ImxhdjczSFhHR0ZpK2V3dEFsQzFWaFE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NjU4MTgzLCJleHAiOjE2OTY3NDQ1ODN9.UqRPdEv5EOf4Gm90JV6qybMUjZhFczBaHRIav88mqbc
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6ImxhdjczSFhHR0ZpK2V3dEFsQzFWaFE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2NzQ5MjgyLCJleHAiOjE2OTY4MzU2ODJ9.A9oirezbAmHHYZ-Htvjj8eR6C7gbE_5RO7l7BDa8qis
 
 ### 상점 키오스크 얘약 확인 요청 및 알림
 POST http://localhost:8082/kiosk

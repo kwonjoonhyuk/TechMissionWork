@@ -1,8 +1,8 @@
 package com.zerobase.tech.register.controller;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import com.zerobase.tech.register.domain.reserve.AddShopReserveForm;
-import com.zerobase.tech.register.domain.reserve.ShopReserveDto;
+import com.zerobase.tech.register.domain.reserveShop.AddShopReserveForm;
+import com.zerobase.tech.register.domain.reserveShop.ShopReserveDto;
 import com.zerobase.tech.register.service.ShopReserveService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -55,9 +55,7 @@ public class ShopReserveController {
         return ResponseEntity.ok(shopReserveService.deleteShopReserve(provider.getUserVo(token).getId(), id));
     }
 
-    /* 예약 내역 확인 (상점 셀러) 키오스크에서 확인된 예약내역은 제외하고 아직 예약목록에 있는 것들만 불러오기
-       seller가 가지고 있는 상점의 예약내역은 전부 불러온다
-    */
+    // 예약 내역 확인 (상점 셀러) 키오스크에서 확인된 예약내역은 제외하고 아직 예약목록에 있는 것들만 불러오기 해당 상점만
     @GetMapping("/seller/search")
     public ResponseEntity<List<ShopReserveDto>> getShopReserveSeller(@RequestHeader(name = "X-AUTH-TOKEN") String token,
                                                                      @RequestParam Long shopId) {

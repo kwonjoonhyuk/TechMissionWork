@@ -81,7 +81,7 @@ public class SignUpApplication {
         return RandomStringUtils.random(10, true, true);
     }
 
-    // 이메일 인증을 위한 url 생성
+    // 이메일 인증을 위한 url 생성.
     private String getVerificationBody(String email, String name,String type ,String code) {
         StringBuilder builder = new StringBuilder();
         return builder.append("Hello").append(name).append("! Please Click Link for Verification.\n")

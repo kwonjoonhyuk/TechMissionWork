@@ -1,13 +1,13 @@
 package com.zerobase.tech.register.service;
 
-import com.zerobase.tech.register.domain.repository.reserve.ShopReserveRepository;
-import com.zerobase.tech.register.domain.repository.review.ReviewRepository;
-import com.zerobase.tech.register.domain.repository.shop.ShopRepository;
-import com.zerobase.tech.register.domain.review.AddReviewForm;
-import com.zerobase.tech.register.domain.review.Review;
-import com.zerobase.tech.register.domain.review.UpdateReviewForm;
-import com.zerobase.tech.register.exception.CustomException;
-import com.zerobase.tech.register.exception.ErrorCode;
+import com.zerobase.tech.register.domain.repository.reserveShop.ShopReserveRepository;
+import com.zerobase.tech.register.domain.repository.reviewShop.ReviewRepository;
+import com.zerobase.tech.register.domain.repository.shops.ShopRepository;
+import com.zerobase.tech.register.domain.reviewShop.AddReviewForm;
+import com.zerobase.tech.register.domain.reviewShop.Review;
+import com.zerobase.tech.register.domain.reviewShop.UpdateReviewForm;
+import com.zerobase.tech.register.exceptions.CustomException;
+import com.zerobase.tech.register.exceptions.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

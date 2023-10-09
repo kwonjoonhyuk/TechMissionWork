@@ -1,6 +1,6 @@
-package com.zerobase.tech.register.domain.repository.review;
+package com.zerobase.tech.register.domain.repository.reviewShop;
 
-import com.zerobase.tech.register.domain.review.Review;
+import com.zerobase.tech.register.domain.reviewShop.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

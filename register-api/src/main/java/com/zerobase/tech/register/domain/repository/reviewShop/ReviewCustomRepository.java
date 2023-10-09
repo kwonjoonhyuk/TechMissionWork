@@ -1,4 +1,4 @@
-package com.zerobase.tech.register.domain.repository.review;
+package com.zerobase.tech.register.domain.repository.reviewShop;
 
 public interface ReviewCustomRepository {
 

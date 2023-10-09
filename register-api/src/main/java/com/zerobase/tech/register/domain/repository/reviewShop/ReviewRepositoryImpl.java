@@ -1,7 +1,7 @@
-package com.zerobase.tech.register.domain.repository.review;
+package com.zerobase.tech.register.domain.repository.reviewShop;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.zerobase.tech.register.domain.review.QReview;
+import com.zerobase.tech.register.domain.reviewShop.QReview;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

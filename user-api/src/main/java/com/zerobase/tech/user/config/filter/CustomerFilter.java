@@ -18,6 +18,7 @@ public class CustomerFilter implements Filter {
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
     private final CustomerService customerService;
 
+    // 셀러 와 고객를 구분하는 필터
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;

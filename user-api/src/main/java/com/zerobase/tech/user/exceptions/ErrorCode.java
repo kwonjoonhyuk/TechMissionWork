@@ -1,4 +1,4 @@
-package com.zerobase.tech.user.exception;
+package com.zerobase.tech.user.exceptions;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

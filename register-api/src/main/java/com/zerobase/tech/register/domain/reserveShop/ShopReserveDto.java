@@ -1,10 +1,9 @@
-package com.zerobase.tech.register.domain.reserve;
+package com.zerobase.tech.register.domain.reserveShop;
 
 
 import lombok.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 
 @Getter
@@ -23,6 +22,7 @@ public class ShopReserveDto {
     private String useShopVerify;
     private String message;
 
+    // ShopReserveController 예약하기(고객) 시에 결과값을 위한 Dto 함수
     public static ShopReserveDto from(ShopReserve shopReserve) {
 
         return ShopReserveDto.builder()
@@ -36,6 +36,7 @@ public class ShopReserveDto {
                 .build();
     }
 
+    // ShopReserveController 예약 내역 확인(고객)시에 결과값을 위한 Dto 함수
     public static ShopReserveDto get(ShopReserve shopReserve){
         String useShopVerify;
         if (shopReserve.getUseShopVerify().equals("false")){
@@ -52,7 +53,7 @@ public class ShopReserveDto {
                 .useShopVerify(useShopVerify)
                 .build();
     }
-
+    //ShopReserveController 예약 내역 확인 (상점 셀러)시에 결과값을 위한 Dto 함수
     public static ShopReserveDto getSeller(ShopReserve shopReserve){
         String useShopVerify = "false";
         if (shopReserve.getUseShopVerify().equals("false")){

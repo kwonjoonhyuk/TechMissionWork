@@ -1,10 +1,10 @@
 package com.zerobase.tech.register.service;
 
-import com.zerobase.tech.register.domain.shop.Shop;
-import com.zerobase.tech.register.domain.repository.shop.ShopMenuRepository;
-import com.zerobase.tech.register.domain.repository.shop.ShopRepository;
-import com.zerobase.tech.register.domain.shop.add.AddShopForm;
-import com.zerobase.tech.register.domain.shop.add.AddShopMenuForm;
+import com.zerobase.tech.register.domain.shops.Shop;
+import com.zerobase.tech.register.domain.repository.shops.ShopMenuRepository;
+import com.zerobase.tech.register.domain.repository.shops.ShopRepository;
+import com.zerobase.tech.register.domain.shops.add.AddShopForm;
+import com.zerobase.tech.register.domain.shops.add.AddShopMenuForm;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
+// 자동적으로 생성시간 업데이트 시간이 DB가 추가 수정 삭제 될때마다 자동적으로 시간 수정됨
 public abstract class BaseEntity {
 
     @CreatedDate

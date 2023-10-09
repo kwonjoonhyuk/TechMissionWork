@@ -13,6 +13,7 @@ public class KioskController {
 
     private final KioskService kioskService;
 
+    // 키오스크 예약 확인(확인 될시에 상점 셀러에게 알림)
     @PostMapping
     public ResponseEntity<String> Get(@RequestBody KioskForm form) {
         return ResponseEntity.ok(kioskService.kioskNotificationCreate(form.getName(), form.getPhone(), form.getReserveNumber(), form.getShopId()));

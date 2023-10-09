@@ -1,12 +1,12 @@
 package com.zerobase.tech.register.service;
 
 import com.zerobase.tech.register.domain.notification.Notify;
-import com.zerobase.tech.register.domain.repository.notification.NotifyRepository;
-import com.zerobase.tech.register.domain.repository.reserve.ShopReserveRepository;
-import com.zerobase.tech.register.domain.repository.shop.ShopRepository;
+import com.zerobase.tech.register.domain.repository.notifications.NotifyRepository;
+import com.zerobase.tech.register.domain.repository.reserveShop.ShopReserveRepository;
+import com.zerobase.tech.register.domain.repository.shops.ShopRepository;
 
-import com.zerobase.tech.register.exception.CustomException;
-import com.zerobase.tech.register.exception.ErrorCode;
+import com.zerobase.tech.register.exceptions.CustomException;
+import com.zerobase.tech.register.exceptions.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +25,7 @@ public class KioskService {
     private final ShopRepository shopRepository;
 
 
+    // 키오스크  예약 확인시 알림 DB에 저장 및 상점 셀러에게 알림이 감
     @Transactional
     public String kioskNotificationCreate(String name, String phone, Long reserveNumber, Long shopId) {
         // 1. 고객 이름과 핸드폰번호와 접수번호로 고객 아이디 가져오기

@@ -17,11 +17,13 @@ public class SignInController {
 
     private final SignInApplication sIgnInApplication;
 
+    // 고객 로그인
     @PostMapping("/customer")
     public ResponseEntity<String> signInCustomer(@RequestBody SignInForm form){
         return ResponseEntity.ok(sIgnInApplication.customerLoginToken(form));
     }
 
+    // 상점(셀러) 로그인
     @PostMapping("/seller")
     public ResponseEntity<String> signInSeller(@RequestBody SignInForm form){
         return ResponseEntity.ok(sIgnInApplication.sellerLoginToken(form));

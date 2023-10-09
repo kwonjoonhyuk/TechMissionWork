@@ -24,6 +24,7 @@ public class CustomerController {
     private final JwtAuthenticationProvider provider;
     private final CustomerService customerService;
 
+    // 고객 정보 가져오기
     @GetMapping("/getInfo")
     public ResponseEntity<CustomerDto> getInfo(@RequestHeader(name = "X-AUTH-TOKEN") String token){
         UserVo vo = provider.getUserVo(token);

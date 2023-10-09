@@ -43,7 +43,7 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJRVVo3amlkUWFVb0liTFhNeWN3bGdSektsVXp2WkpoMC9XSDdvVGJzSjhZPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzE5ODcxLCJleHAiOjE2OTY0MDYyNzF9.wW-0fS5ZYVUXxEftGB6lLOc96Suy8cFP8O_Dsr95hUg
 
 {
-  "menuDescription" : "삼선짬뽕입니다.",
+  "menuDescription" : "삼선짬뽕입니다",
   "menuName": "짬뽕",
   "price": 280,
   "shopId": 2
